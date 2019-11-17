@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+
+body {
+    background-color: #F9FBFD;
+  }
+
+@font-face {
+    font-family: Gotham;
+    src: url(assets/fonts/Gotham-Medium.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(assets/fonts/Gotham-Thin.otf);
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(assets/fonts/Gotham-Book.otf);
+}

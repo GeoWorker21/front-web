@@ -1,0 +1,67 @@
+$textColorLogo: #172B4D;
+
+body {
+	height: 100vh;
+	color: #fff;
+    background-image: url(/assets/images/Background.svg);
+    background-size: 100%;
+    display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.card {
+    width: 536px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 17px #2C28281C;
+    background-color: #F7FAFC;
+}
+
+.logo-text-base {
+    text-align: left;
+    font-family: 'Gotham';
+    font-weight: bold;
+    color: $textColorLogo;
+}
+.logo-text-title {
+    @extend .logo-text-base;
+    font-size: 34px;
+    margin-bottom: -10px;
+}
+
+.logo-text-sub {
+    @extend .logo-text-base;
+    font-size: 15px;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+#logo {
+    padding-right: 40px;
+}
+
+#logo-row {
+    margin-bottom: 10px;
+}
+
+.geo-text {
+    font-family: 'Gotham Book';
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top:10px;
+}
+
+.geo-link {
+    @extend .geo-text;
+    color: #FFCB29;
+}
+

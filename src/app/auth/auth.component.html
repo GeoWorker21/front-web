@@ -1,0 +1,43 @@
+<body class="centered">
+    <div class="container no-padding">
+        <div class="row">
+            <div class="col centered">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row" id="logo-row">
+                                <div class="col">
+                                    <div class="container-fluid centered" id="logo">
+                                        <div class="row">
+                                            <div col>
+                                                <img src="/assets/images/avion-globe-terrestre-std.png">
+                                            </div>
+                                            <div class="col centered no-padding">
+                                                <div class="container-fluid no-padding">
+                                                    <div class="logo-text-title">GeoWorker</div>
+                                                    <div class="logo-text-sub">Work without limit</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row centered">
+                                <app-login *ngIf="this.mode === 'login'"></app-login>
+                                <app-register *ngIf="this.mode === 'register'"></app-register>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col centered">
+                <div class="geo-text" *ngIf="this.mode === 'register'">Already registered? <a (click)="changeMode('login')"><span
+                            class="geo-link">Sign in</span></a></div>
+                <div class="geo-text" *ngIf="this.mode === 'login'">New user? <a (click)="changeMode('register')"><span
+                            class="geo-link">Sign Up</span></a></div>
+            </div>
+        </div>
+    </div>
+</body>
