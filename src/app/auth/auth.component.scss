@@ -1,15 +1,5 @@
 $textColorLogo: #172B4D;
 
-body {
-	height: 100vh;
-	color: #fff;
-    background-image: url(/assets/images/Background.svg);
-    background-size: 100%;
-    display: flex;
-	justify-content: center;
-	align-content: center;
-}
-
 .centered {
 	display: flex;
 	justify-content: center;
@@ -63,5 +53,12 @@ body {
 .geo-link {
     @extend .geo-text;
     color: #FFCB29;
+}
+
+#auth-content {
+    display: flex;
+	justify-content: center;
+    align-content: center;
+    height: 100vh;
 }
 

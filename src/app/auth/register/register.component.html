@@ -1,15 +1,15 @@
-<form>
+<form (ngSubmit)="onSubmit(form)" #form='ngForm' *ngIf="!ShowLoading">
     <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <input class="form-control geo-input" type="email" placeholder="Username or email">
+                    <input class="form-control geo-input" type="email" placeholder="Username or email" name="email" ngModel required>
                 </div>
                 <div class="form-group space">
-                    <input class="form-control geo-input" type="password" placeholder="Password">
+                    <input class="form-control geo-input" type="password" placeholder="Password" name="password" ngModel required>
                 </div>
                 <div class="form-group space">
-                    <input class="form-control geo-input" type="password" placeholder="Confirm password">
+                    <input class="form-control geo-input" type="password" placeholder="Confirm password" name="confirmPassword" ngModel required>
                 </div>
             </div>
         </div>
@@ -26,3 +26,6 @@
         </div>
     </div>
 </form>
+<div *ngIf="ShowLoading" id="loader">
+    <div class="vs-spinner"></div>
+</div>

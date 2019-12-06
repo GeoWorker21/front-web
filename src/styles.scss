@@ -2,6 +2,14 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "./visual-framework/spinner";
+@import "./visual-framework/utility";
+$fa-font-path: "./visual-framework/fontawesome/webfonts";
+@import "./visual-framework/fontawesome/fontawesome.scss";
+@import "./visual-framework/fontawesome/solid.scss";
+@import "./visual-framework/card";
+@import "./visual-framework/input";
+
 
 
 body {
@@ -24,4 +32,14 @@ body {
 @font-face {
     font-family: 'Gotham Book';
     src: url(assets/fonts/Gotham-Book.otf);
+}
+
+body {
+	height: 100vh;
+	color: #fff;
+    background-image: url(/assets/images/Background.svg);
+    background-size: 100%;
+    display: flex;
+	justify-content: center;
+	align-content: center;
 }

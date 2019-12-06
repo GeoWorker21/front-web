@@ -1,0 +1,35 @@
+.card-body {
+    font-family: 'Gotham';
+    font-weight: bold;
+    font-size: 16px;
+    height: 96px;
+    color: #707070;
+    width: 400px;
+}
+
+#name {
+    text-align: center;
+}
+
+#arrow {
+    color: #707070;
+    font-size: 40px;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+}
+
+.centered-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centered-right {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+}
