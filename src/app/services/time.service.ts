@@ -14,10 +14,8 @@ export class TimeService {
   setTimeZone(): void {
     const date = new Date();
 
-    const jwtToken = localStorage.getItem("JWT_TOKEN");
-    this.httpClient.post<JwtToken>(this.urlService.getUrl() + "/user/location/" + date.getTimezoneOffset(), {},
-      { headers: new HttpHeaders({ Authorization: "" + jwtToken})
-      }).subscribe(
+    this.httpClient.post<JwtToken>(this.urlService.getUrl() + "/user/time/" + date.getTimezoneOffset(), {},
+      {}).subscribe(
       data => {
       },
       error => {
