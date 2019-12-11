@@ -15,7 +15,7 @@ export class TokenInterceptorService implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (this.authService.getJwtToken()) {
-      this.addToken(request, this.authService.getJwtToken().access_token);
+      request = this.addToken(request, this.authService.getJwtToken().access_token);
     }
 
     return next.handle(request).pipe(catchError(error => {
@@ -29,10 +29,8 @@ export class TokenInterceptorService implements HttpInterceptor {
 
   private addToken(request: HttpRequest<any>, token: string) {
     return request.clone({
-      setHeaders: {
-        'Authorization': `${token}`
-      }
-    });
+      headers: request.headers.set('Authorization', token)
+      });
   }
 
   private handle401Error(request: HttpRequest<any>, next: HttpHandler) {

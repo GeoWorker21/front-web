@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-body container">
+        <div class="row">
+            <div class="col">
+                <div class="container">
+                    <div class="centered">
+                        <img src="/assets/images/user.svg" id="avatar">
+                    </div>
+                    <div class="centered">
+                        <div class="geo-text">{{username}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col centered">
+                <div class="container-fluid vs-no-padding">
+                    <div class="row vs-no-padding">
+                        <div class="col vs-no-padding">
+                            <div class="clock">
+                                {{Time | date: 'HH:mm' }}
+                            </div>
+                        </div>
+                        <div class="col vs-no-padding centered">
+                            <div class="container-fluid vs-no-padding">
+                                <img src="https://www.countryflags.io/{{countryCode}}/flat/24.png">
+                                <div class="code-text">{{countryCode}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

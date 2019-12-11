@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -10,9 +11,13 @@ export class TeamCardComponent implements OnInit {
   @Input() Name: string;
   @Input() Logo: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToTeam() {
+    this.router.navigateByUrl("/team/" + this.Name);
   }
 
 }

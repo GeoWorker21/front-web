@@ -1,0 +1,13 @@
+<div class="menu">
+    <div class="header centered">
+        <div class="title"> {{TeamName}} </div>
+    </div>
+    <div class="body container-fluid vs-no-padding">
+        <div class="row vs-no-padding mt-3" *ngFor="let member of Members">
+            <div class="col vs-no_padding">
+                <app-member-card [username]="member.username" [countryCode]="member.country_code"
+                    [offsetTime]="member.time" [picture]="member.picture"></app-member-card>
+            </div>
+        </div>
+    </div>
+</div>

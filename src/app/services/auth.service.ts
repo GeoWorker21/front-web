@@ -1,3 +1,4 @@
+import { LocationService } from './location.service';
 import { JwtToken } from './../models/jwt-token';
 import { UrlService } from './url.service';
 import { Injectable } from '@angular/core';
@@ -15,8 +16,10 @@ export class AuthService {
   private jwtToken: JwtToken;
   private loggedUser: string;
 
-  constructor(private urlService: UrlService, private httpClient: HttpClient) {
+  constructor(private urlService: UrlService, private httpClient: HttpClient, private locationService: LocationService) {
     this.jwtToken = new JwtToken(null);
+    this.jwtToken.access_token = '';
+    this.jwtToken.refresh_token = '';
   }
 
   register(username: string, password: string): Observable<any> {
@@ -67,7 +70,14 @@ export class AuthService {
   private doLoginUser(username: string, token: JwtToken) {
     this.loggedUser = username;
     this.storeTokens(token);
-
+    this.locationService.SetLocationByIp().subscribe(
+    data => {
+      console.log("data", data);
+    },
+    error => {
+      console.log("error", error)
+  }
+      )
   }
 
   private storeTokens(jwt: JwtToken) {
